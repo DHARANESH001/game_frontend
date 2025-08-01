@@ -1,0 +1,108 @@
+.leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-background);
+  height: 100vh; /* Full screen height */
+  width: 100%; /* Full screen width */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.home-btn:hover {
+  transform: scale(1.05);
+  background: var(--color-primary-dark);
+}
+
+.leaderboard-title {
+  font-size: 3rem;
+  color: var(--color-accent);
+  text-shadow: 0 0 20px var(--color-accent);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.leaderboard-table {
+  width: 90%; /* Almost full width */
+  height: 60%; /* Takes large portion of screen */
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+  font-size: 1.4rem; /* Bigger text */
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.leaderboard-table th {
+  background: var(--color-primary-dark);
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background: #1f1f1f;
+}
+
+.leaderboard-table tr:hover {
+  background: #292929;
+}
+
+.leaderboard-table td {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .leaderboard-title {
+    font-size: 2.2rem;
+  }
+
+  .leaderboard-table {
+    width: 95%;
+    font-size: 1.1rem;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaderboard-title {
+    font-size: 1.8rem;
+  }
+
+  .leaderboard-table {
+    font-size: 1rem;
+    height: auto;
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 0.8rem;
+  }
+}
