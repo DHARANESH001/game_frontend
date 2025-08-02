@@ -76,7 +76,7 @@ const Play = () => {
   const saveWinToBackend = async () => {
     try {
       const token = JSON.parse(localStorage.getItem("user")).token;
-      await fetch("http://localhost:8080/api/game/win", {
+      await fetch("https://game-backend-6.onrender.com/", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

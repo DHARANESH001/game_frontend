@@ -20,7 +20,7 @@ const LeaderBoard = () => {
         }
 
         const token = JSON.parse(tokenData).token;
-        const response = await fetch("http://localhost:8080/api/game/leaderboard", {
+        const response = await fetch("https://game-backend-6.onrender.com/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

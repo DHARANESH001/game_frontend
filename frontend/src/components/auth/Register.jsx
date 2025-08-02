@@ -36,7 +36,7 @@ const Register = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8080/api/auth/register', {
+      const response = await fetch('https://game-backend-6.onrender.com/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

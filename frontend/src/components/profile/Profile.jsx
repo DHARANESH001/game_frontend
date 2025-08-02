@@ -31,7 +31,7 @@ const Profile = () => {
         }
 
         // Fetch Profile Data
-        const response = await fetch("http://localhost:8080/api/user/profile", {
+        const response = await fetch("https://game-backend-6.onrender.com/", {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json"
@@ -53,7 +53,7 @@ const Profile = () => {
         });
 
         // Fetch Profile Image
-        const imgRes = await fetch("http://localhost:8080/api/user/profile-image", {
+        const imgRes = await fetch("https://game-backend-6.onrender.com/", {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -86,7 +86,7 @@ const Profile = () => {
 
   const handleUpdate = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/user/profile", {
+      const response = await fetch("https://game-backend-6.onrender.com/", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -111,7 +111,7 @@ const Profile = () => {
     formDataObj.append("image", image);
 
     try {
-      const response = await fetch("http://localhost:8080/api/user/upload-image", {
+      const response = await fetch("https://game-backend-6.onrender.com/", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formDataObj
