@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/home/Home';
-import GameHome from './components/gamehome/gamehome';
+import GameHome from './components/gamehome/GameHome';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import LeaderBoard from './components/options/LeaderBoard';
